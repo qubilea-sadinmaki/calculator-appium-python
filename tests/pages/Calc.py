@@ -4,7 +4,7 @@ from  appium . webdriver . common . mobileby  import  MobileBy
 
 
 class  Calculator :
-    def  __init__ ( self , driver ):
+    def __init__(self, driver):
         self.driver  =  driver
         self.eq  =  WebDriverWait ( self.driver , 10 ).until ( EC.presence_of_element_located ((
             MobileBy . ID , 'com.google.android.calculator:id/eq'
@@ -38,7 +38,6 @@ class  Calculator :
         return WebDriverWait ( self.driver , 10 ). until ( EC.presence_of_element_located ((
             MobileBy . ID , 'com.google.android.calculator:id/result_final'
         ))).text
-        #return self.driver.find_element(MobileBy.ID ,'com.google.android.calculator:id/result_final' ).text
 
     def checkNumArgs (self, numbers):
         if(len(numbers) < 2):
@@ -85,7 +84,7 @@ class  Calculator :
         self.checkNumArgs(args)
         result = args[0]
         
-        for i,num in enumerate(args):
+        for i, num in enumerate(args):
             self.clicknumber( num )
             
             if i > 0:
