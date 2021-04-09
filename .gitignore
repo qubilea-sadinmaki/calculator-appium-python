@@ -1,5 +1,0 @@
-venv/**
-.vscode/**
-test_bundle.zip
-*.pyc
-.pytest_cache/**
